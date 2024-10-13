@@ -210,22 +210,6 @@
     {% empty %}
       <p class="padding-bottom-sm">No reviews yet...</p>
     {% endfor %}
-
-    <div class="card mb-3">
-      <div class="card-body">
-        <div class="form-group">
-          {% if request.user.is_authenticated %}
-            <form method="POST" action="">
-              {% csrf_token %}
-              {{ review_form|crispy }}
-              <button class="btn btn-success">Submit</button>
-            </form>
-          {% else %}
-            <p>Please <a href="{% url 'login' %}"> sign in </a> to add review!</p>
-          {% endif %}
-        </div>
-      </div>
-    </div>
     <!-- Product Review Section End-->
     <!-- ============================ COMPONENT Product Details End ================================= -->
   </div>
