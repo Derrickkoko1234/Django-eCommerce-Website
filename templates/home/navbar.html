@@ -53,9 +53,9 @@
         <ul class="navbar-nav mr-auto">
           <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
           {% if user.is_authenticated %}
-            <li class="nav-item"><a class="nav-link" href="{% url 'wishlist' %}">Wishlist ({{ request.user.wishlist.count }})</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Wishlist ({{ request.user.wishlist.count }})</a></li>
           {% else %}
-            <li class="nav-item"><a class="nav-link" href="{% url 'wishlist' %}">Wishlist</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Wishlist</a></li>
           {% endif %}
           <li class="nav-item"><a class="nav-link" href="{% url 'order_history' %}">Your Orders</a></li>
           <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact Us</a></li>
