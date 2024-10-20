@@ -32,7 +32,7 @@ def index(request):
 
     # Pagination Configuration
     page = request.GET.get("page", 1)
-    paginator = Paginator(query, 20)
+    paginator = Paginator(query, 4)
 
     try:
         query = paginator.page(page)
